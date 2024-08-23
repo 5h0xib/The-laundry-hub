@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF=8">
+      <meta name="viewport" content="width=device-width", initial-scale="1.0">
+      <title>The laundry hub</title>
+      <link rel = "icon" class="Title logo" href = "Gallary/otherimg/LOGO.png" type = "image/x-icon">
+     
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+      *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+link {
+    border-radius: 50px;
+}
+
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(Gallary/otherimg/WEB\ BG.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 200px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.7s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-bottom: 0%;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.heroDiv{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.hero-btnTitle{
+    color: #ffb3b3;
+    margin-bottom: 0px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-weight: 1000;
+}
+
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 23px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+    border-bottom-left-radius: 10px;
+    font-weight: 600;
+}
+
+.hero-btn2{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 23px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+    border-bottom-right-radius: 10px;
+    font-weight: 600;
+}
+
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #ff1100;
+}
+
+.hero-btn2:hover{
+    border: 1px solid #f44336;
+    background: #ff1100;
+}
+
+nav .fa{
+    display: none;
+}
+
+
+
+a#scroll-btn{
+    position: absolute;
+    height: 5em;
+    width: 2.50em;
+    border: 0.2em solid #ff0000;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 6.25em;
+    border-radius: 3em;
+}
+
+a#scroll-btn:before{
+    position: absolute;
+    content: "";
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%; 
+    top: 1em;
+    height: 0.5em;
+    width: 0.5em;
+    animation: move-down 2s infinite;
+}
+
+a#scroll-btn:after{
+    position: absolute;
+    content: "SCROLL DOWN";
+    display: block;
+    width: 12em;
+    text-align: center;
+    left: -4.5em;
+    top: 6em;
+    font-size: 1em;
+    color: #fe0000;
+    letter-spacing: 6px;
+    font-weight: 1000;
+}
+
+@keyframes move-down{
+    80%{
+        opacity: 0.1;
+    }
+    100%{
+        transform: translateY(3em);
+        opacity: 0;
+    }
+}
+
+
+/*--------course--------*/
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.course-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin-right: 2%;
+    margin-left: 2%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+    .text-box h1 {
+        font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.6s;
+        overflow: hidden;
+        display: none; /* Ensure the nav menu is hidden by default on smaller screens */
+    }
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.showMenu {
+  right: 0 !important;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+button {
+  color: #000 !important;
+}
+
+/*---------------campus-------------*/
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgb(226, 0, 0, 0.7);
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 400;
+    color: rgb(255, 0, 0);
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+    color: #fff;
+}
+
+/*---------------facilities------------*/
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/*----------footer-----------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f4433633;
+}
+
+.footer h4{
+    padding-top: 10px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.footer p{
+    font-weight: 400;
+}
+
+.icons .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    padding-top: 5px;
+}
+
+
+    
+</style>
+
+
+</head>
+
+    <body>
+      <header>
+        <nav>
+           <a href="index.html"><img src="Gallary/otherimg/logo2.png"></a>
+           <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="toggleMenu()"></i>
+               <ul>
+                   <li><b><a href="">HOME</a></b></li>
+                   <li><b><a href="gallary.html">GALLERY</a></b></li>
+                   <li><b><a href="prices.html">PRICES</a></li>
+                   <li><b><a href="contact.html">CONTACT</a></b></li>
+                   <li><b><a href="BeAlly.html">BE A ALLY</a></b></li>
+               </ul>
+           </div>
+           <i class="fa fa-bars" onclick="toggleMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>The laundry hub</h1>
+            <p class="2ndLine">laundry and dry cleaning in your area</p>
+        <div class="heroDiv">
+            <h4 class="hero-btnTitle">Shedule pick up by</h4>
+            <a href="mailto:marketing@laundryhub.info" class="hero-btn">Email</a> 
+            <a href="https://wa.me/9175930572" target="_blank" class="hero-btn2">Whatsapp</a>      
+        </div>    
+        </div>
+        <section id="section-1">
+            <a id="scroll-btn"></a>
+        </section>
+        
+      </header>
+<!---------course---------->
+
+<section class="course">
+    <h1>What we offer!</h1>
+    <p>Our laundry's Services </p>
+
+    <div class="row">
+        <div class="course-col">
+        <h3>STEAM IRONING</h3>
+        <p>Rs 15 per Piece on Steam Ironing ,Rs 220/KG Express
+            with in 60 Minutes</p>
+    </div>
+
+        <div class="course-col">
+        <h3>DRYING</h3>
+        <p>We offer drying for shoes and clothes,<br> Avail Instant Dry In Rainy Season</p>
+    </div>
+
+        <div class="course-col">
+        <h3>WASHING</h3>
+        <p>We offer wash for all types of clothes ,  
+            for more info visit prices section above </p>
+    </div>
+
+        <div class="course-col">
+        <h3>SHOES DRY CLEANING</h3>
+        <p>we offer shoes cleaning for all types of shoes and boots</p>
+    </div>
+    </div>
+
+</section>
+
+<!-------our laundry-------->
+
+<section class="campus">
+    <h1>our laundry</h1>
+    <p>We love the job, that you hate , Free your self and let us serve  </p>
+
+    <div class="row">
+        <div class="campus-col">
+            <img src="Gallary/otherimg/iron2.jpg">
+                <div class="layer">
+                    <h3>IRONING</h3>
+                </div>
+        </div>
+
+        <div class="campus-col">
+            <img src="Gallary/otherimg/wash2.jpg">
+                <div class="layer">
+                    <h3>WASHING</h3>
+                </div>
+        </div>
+
+        <div class="campus-col">
+            <img src="Gallary/otherimg/dry2.jpg">
+                <div class="layer">
+                    <h3>MECHINE DRY</h3>
+                </div>
+        </div>
+    </div>
+</section>
+
+<!-------------FACILITIES--------------->
+
+<section class="facilities">
+    <h1>Our Facilities</h1>
+    <p>laundry and dry cleaning in ur area</p>
+
+    <dic class="row">
+        
+        <div class="facilities-col">
+            <h3>STEAM IRONING</h3>
+            <p>Rs 15 per Piece on Steam Ironing ,Rs 150/KG Express <br> with 60 Minutes,
+                <i>Avail Instant Dry In Rainy Season</i></p>
+        </div>
+
+        <div class="facilities-col">
+            <h3>WASHING AND DRYING</h3>
+            <p>15% Discount on Packages,Free Pick & <br> Delivery For Dry Cleaning Services</p>
+        </div>
+
+        <div class="facilities-col">
+            <h3>SHOES DRY CLEANING</h3>
+            <p> Sport-shoes INR 300 per pair
+                Shoes-leather with <br> polish INR 250
+                boots-leather 500</p>
+        </div>
+
+    </dic>
+</section>
+
+
+<!----------footer------------>
+
+<section class="footer">
+    <h4>@The Laundry Hub</h4>
+    <p>the laundry located in viman nagar pune , all rights reserved <br> made with <i class="fa fa-heart" style="color: #f443367a;"></i> by Shoaib Sayed</p>
+    <div class="icons">
+        <a href="https://www.facebook.com/Laundry-Hub-102169399245581" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/_the_laundry_hub_viman_nagar/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://wa.me/9175930572" target="_blank"><i class="fa fa-whatsapp"></i></a>
+    </div>
+</section>
+
+
+    
+<!--------------JavaScript for toggle icon------------>
+<script>
+    var navLinks = document.getElementById("navLinks");
+    var isVisible = false;
+
+ function toggleMenu() {
+  if (isVisible) {
+    navLinks.style.display = "none";
+    isVisible = false;
+  } else {
+    navLinks.style.display = "block";
+    isVisible = true;
+  }
+}
+  </script>   
+    </body>
+</html>

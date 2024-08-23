@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF=8">
+      <meta name="viewport" content="width=device-width", initial-scale="1.0">
+      <title>The laundry hub</title>
+      <link rel = "icon" class="Title logo" href = "Gallary/otherimg/LOGO.png" type = "image/x-icon">
+     
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+      *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+link {
+    border-radius: 50px;
+}
+
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(Gallary/otherimg/WEB\ BG.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 200px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.7s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+
+
+nav .fa{
+    display: none;
+}
+
+.Gallary{
+    text-align: center;
+    color: rgb(255, 0, 0);
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0px;
+        text-align: left;
+        z-index: 2;
+        transform: 0.6s;
+        display: none;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+/*-------gallary---------*/
+
+.container{
+  position: relative;
+  min-height: 50vh;
+}
+
+.container .image-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container .image-container .image{
+  height: 250px;
+  width: 350;
+  border: 10px solid rgba(255, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container .image-container .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: .2s linear;
+  border-radius: 5px;
+}
+
+.container .image-container .image:hover img{
+  transform: scale(1.1);
+  border-radius: 10px;
+}
+
+
+/*--------IDK JUST DONT Touch--------*/
+
+
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.course-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin-right: 2%;
+    margin-left: 2%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/*----------footer-----------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f4433633;
+}
+
+.footer h4{
+    padding-top: 10px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.footer p{
+    font-weight: 400;
+}
+
+.icons .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    padding-top: 5px;
+}
+
+
+    
+</style>
+
+<!-------------head__gallary--------------->
+
+</head>
+
+    <body>
+      <header>
+        <nav>
+           <a href="home.html"><img src="Gallary/otherimg/logo2.png"></a>
+           <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="toggleMenu()"></i>
+               <ul>
+                   <li><b><a href="home.html">HOME</a></b></li>
+                   <li><b><a href="">GALLARY</a></b></li>
+                   <li><b><a href="prices.html">PRICES</a></li>
+                   <li><b><a href="contact.html">CONTACT</a></b></li>
+                   <li><b><a href="BeAlly.html">BE ALLY</a></b></li>
+               </ul>
+           </div>
+           <i class="fa fa-bars" onclick="toggleMenu()"></i>
+        </nav>
+        <div class="Gallary">
+            <h1>Gallary</h1></div>
+        
+        <div class="container">
+          <div class="image-container">
+              <div class="image"> <img src="Gallary/gallary/Before and After shoe.jpg"></div>
+              <div class="image"> <img src="Gallary/gallary/morning front.jpg"></div>
+              <div class="image"> <img src="Gallary/gallary/night front 1.jpg"></div>
+              <div class="image"> <img src="Gallary/gallary/night front 2.jpg"></div>
+          </div>
+        </div>
+        
+    
+  
+      <script type="text/javascript">
+      var counter = 1;
+      setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 4){
+          counter = 1;
+        }
+      }, 5000);
+      </script>
+  
+      </header>
+
+
+
+<!----------footer------------>
+
+<section class="footer">
+    <h4>© The Laundry Hub</h4>
+    <p>the laundry located in viman nagar pune , all rights reserved <br> made with <i class="fa fa-heart" style="color: #f443367a;"></i> by Shoaib Sayed</p>
+    <div class="icons">
+        <a href="https://www.facebook.com/Laundry-Hub-102169399245581" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/_the_laundry_hub_viman_nagar/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://wa.me/9175930572" target="_blank"><i class="fa fa-whatsapp"></i></a>
+    </div>
+</section>
+
+
+    
+<!--------------JavaScript for toggle icon------------>
+     <script>
+     var navLinks = document.getElementById("navLinks");
+     var isVisible = false;
+
+ function toggleMenu() {
+  if (isVisible) {
+    navLinks.style.display = "none";
+    isVisible = false;
+  } else {
+    navLinks.style.display = "block";
+    isVisible = true;
+  }
+}
+      </script>
+    
+    </body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF=8">
+      <meta name="viewport" content="width=device-width", initial-scale="1.0">
+      <title>The laundry hub</title>
+      <link rel = "icon" class="Title logo" href = "Gallary/otherimg/LOGO.png" type = "image/x-icon">
+     
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+      *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+link {
+    border-radius: 50px;
+}
+
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(Gallary/otherimg/WEB\ BG.jpg);
+    height: auto;
+    width: 100%;
+    padding-bottom: 50px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 200px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.7s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+nav .fa{
+    display: none;
+}
+
+
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0px;
+        text-align: left;
+        z-index: 2;
+        transform: 0.6s;
+        display: none;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+/*--------IDK, JUST DONT Touch--------*/
+
+
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.course-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin-right: 2%;
+    margin-left: 2%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/*----------footer-----------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f4433633;
+}
+
+.footer h4{
+    padding-top: 10px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.footer p{
+    font-weight: 400;
+}
+
+.icons .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    padding-top: 5px;
+}
+
+/*------------BE ally form---------*/
+
+body{
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.contact-section{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info{
+  color: #fff;
+  max-width: 500px;
+  line-height: 65px;
+  padding-left: 50px;
+  font-size: 18px;
+}
+
+.contact-info i{
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+.contact-form{
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contact-info, .contact-form{
+  flex: 1;
+}
+
+.contact-form h2{
+  color: rgb(255, 0, 0);
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.contact-form .text-box{
+  background: rgba(255, 0, 0, 0.232);
+  color: rgb(255, 255, 255);
+  border: none;
+  width: calc(50% - 10px);
+  height: 50px;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-form .text-box:first-child{
+  margin-right: 15px;
+}
+
+.contact-form textarea{
+  background: rgba(255, 0, 0, 0.232);
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  min-height: 200px;
+  max-height: 400px;
+  resize: none;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-form .send-btn{
+  float: right;
+  background: #e32e2e;
+  color: #fff;
+  border: none;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: 3px;
+}
+
+.contact-form .send-btn:hover{
+  background: #8c2e2e;
+}
+
+.contact-para{
+    color: #fff;
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 950px){
+  .contact-section{
+    flex-direction: column;
+  }
+
+  .contact-info, .contact-form{
+    margin: 30px 50px;
+  }
+
+  .contact-form h2{
+    font-size: 30px;
+  }
+
+  .contact-form .text-box{
+    width: 100%;
+  }
+}
+
+    
+</style>
+
+<!-------------head__BE ally--------------->
+
+</head>
+
+    <body>
+      <header>
+        <nav>
+           <a href="home.html"><img src="Gallary/otherimg/logo2.png"></a>
+           <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="toggleMenu()"></i>
+               <ul>
+                   <li><b><a href="home.html">HOME</a></b></li>
+                   <li><b><a href="gallary.html">GALLARY</a></b></li>
+                   <li><b><a href="prices.html">PRICES</a></li>
+                   <li><b><a href="contact.html">CONTACT</a></b></li>
+                   <li><b><a href="">BE ALLY</a></b></li>
+               </ul>
+           </div>
+           <i class="fa fa-bars" onclick="toggleMenu()"></i>
+        </nav>
+
+    <div class="contact-section">
+      <div class="contact-form">
+        <h2>be a partner</h2>
+        <form class="contact" action="https://api.web3forms.com/submit" method="post">
+          <input type="hidden" name="access_key" value="a67c3ad1-28c5-4e0d-b6e0-391e8b3eea86">
+          <input type="text" name="name" class="text-box" placeholder="Your Name" required>
+          <input type="email" name="email" class="text-box" placeholder="Your Email" required>
+          <input type="number" name="phone" class="text-box" placeholder="Your Phone no" required>
+          <textarea name="message" rows="2" placeholder="Your Message" required></textarea>
+          <button type="submit" class="send-btn" value="Send">submit</button>
+        </form>
+        <p class="contact-para">NOTE: Enter correct information</p>
+      </div>
+    </div>
+    <!--contact section end-->
+
+    <script type="text/javascript">
+    if(window.history.replaceState){
+      window.history.replaceState(null, null, window.location.href);
+    }
+    </script>
+        
+      </header>
+
+
+
+<!----------footer------------>
+
+<section class="footer">
+    <h4>© The Laundry Hub</h4>
+    <p>the laundry located in viman nagar pune , all rights reserved <br> made with <i class="fa fa-heart" style="color: #f443367a;"></i> by Shoaib Sayed</p>
+    <div class="icons">
+        <a href="https://www.facebook.com/Laundry-Hub-102169399245581" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/_the_laundry_hub_viman_nagar/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://wa.me/9175930572" target="_blank"><i class="fa fa-whatsapp"></i></a>
+    </div>
+</section>
+
+
+    
+<!--------------JavaScript for toggle icon------------>
+     <script>
+    var navLinks = document.getElementById("navLinks");
+    var isVisible = false;
+
+ function toggleMenu() {
+  if (isVisible) {
+    navLinks.style.display = "none";
+    isVisible = false;
+  } else {
+    navLinks.style.display = "block";
+    isVisible = true;
+  }
+}
+      </script>
+    
+    </body>
+</html>

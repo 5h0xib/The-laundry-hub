@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF=8">
+      <meta name="viewport" content="width=device-width", initial-scale="1.0">
+      <title>The laundry hub</title>
+      <link rel = "icon" class="Title logo" href = "Gallary/otherimg/LOGO.png" type = "image/x-icon">
+     
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+      *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+link {
+    border-radius: 50px;
+}
+
+header{
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(Gallary/otherimg/WEB\ BG.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 200px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.7s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+nav .fa{
+    display: none;
+}
+
+
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0px;
+        text-align: left;
+        z-index: 2;
+        transform: 0.6s;
+        display: none;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+/*-------Prices--------*/
+
+.head h1 {
+  color: #f44336;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #ff110017;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-align: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+}
+
+.table th.TopMain {
+  text-align: center;
+  color: #ffa099;
+}
+
+.left1 {
+  text-align: left;
+}
+
+
+/*----------footer-----------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f4433633;
+}
+
+.footer h4{
+    padding-top: 10px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.footer p{
+    font-weight: 400;
+}
+
+.icons .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    padding-top: 5px;
+}
+
+
+    
+</style>
+
+<!-------------head__prices--------------->
+
+</head>
+
+    <body>
+      <header>
+        <nav>
+           <a href="home.html"><img src="Gallary/otherimg/logo2.png"></a>
+           <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="toggleMenu()"></i>
+               <ul>
+                   <li><b><a href="home.html">HOME</a></b></li>
+                   <li><b><a href="gallary.html">GALLARY</a></b></li>
+                   <li><b><a href="">PRICES</a></li>
+                   <li><b><a href="contact.html">CONTACT</a></b></li>
+                   <li><b><a href="BeAlly.html">BE ALLY</a></b></li>
+               </ul>
+           </div>
+           <i class="fa fa-bars" onclick="toggleMenu()"></i>
+        </nav>
+        <div class="head"><h1><u>Prices</u></h1></div>
+        <div class="container">
+          <div class="card">
+            <table class="table">
+              <tr>
+                <th class="TopMain"><u>MENS</u></th><th class="TopMain">INR</th>
+              </tr>
+              <tr>
+                <th class="left1">Shirt/T-shirt</th><th class="price">95</th>
+              </tr>
+              <tr>
+                <th class="left1">Denim/Trouser</th><th class="price">95</th>
+              </tr>
+              <tr>
+                <th class="left1">Blazer</th><th class="price">320</th>
+              </tr>
+              <tr>
+                <th class="left1">Leather Jacket</th><th class="price">350</th>
+              </tr>
+              <tr>
+                <th class="left1">Long Coat</th><th class="price">375</th>
+              </tr>
+              <tr>
+                <th class="left1">Regular Kurta</th><th class="price">150</th>
+              </tr>
+              <tr>
+                <th class="left1">Regular pyjama</th><th class="price">95</th>
+              </tr>
+              <tr>
+                <th class="left1">Sweater</th><th class="price">150</th>
+              </tr>
+              <tr>
+                <th class="left1">Sherwani</th><th class="price">500</th>
+              </tr>
+            </table>
+          </div>
+          <div class="card">
+            <table class="table">
+              <tr>
+                <th class="TopMain"><u>WOMENS</u></th><th class="TopMain">INR</th>
+              </tr>
+              <tr>
+                <th class="left1">Shirt/T-shirt/Top</th><th class="price">95</th>
+              </tr>
+              <tr>
+                <th class="left1">Denim/Trousers/<br>Slacks</th><th class="price">95</th>
+              </tr>
+              <tr>
+                <th class="left1">Long Dress</th><th class="price">350</th>
+              </tr>
+              <tr>
+                <th class="left1">Kameez</th><th class="price">150</th>
+              </tr>
+              <tr>
+                <th class="left1">Salwar</th><th class="price">95</th>
+              </tr>
+              <tr>
+                <th class="left1">Saree Regular</th><th class="price">250</th>
+              </tr>
+              <tr>
+                <th class="left1">Saree Heavy</th><th class="price">500</th>
+              </tr>
+              <tr>
+                <th class="left1">Lehanda/Ghagra</th><th class="price">600</th>
+              </tr>
+              <tr>
+                <th class="left1">Shawl</th><th class="price">150</th>
+              </tr>
+            </table>
+          </div>
+          <div class="card">
+            <table class="table">
+              <tr>
+                <th class="TopMain"><u>CLOTH</u></th><th class="TopMain">INR</th>
+              </tr>
+              <tr>
+                <th class="left1">Bed Sheet-small</th><th class="price">50</th>
+              </tr>
+              <tr>
+                <th class="left1">Bed Sheet-double</th><th class="price">100</th>
+              </tr>
+              <tr>
+                <th class="left1">Pillow/Cover</th><th class="price">35/90</th>
+              </tr>
+              <tr>
+                <th class="left1">Travel Bag S</th><th class="price">275</th>
+              </tr>
+              <tr>
+                <th class="left1">Travel Bag L</th><th class="price">375</th>
+              </tr>
+              <tr>
+                <th class="left1">Blanket/Comforter<br>(single)</th><th class="price">300</th>
+              </tr>
+              <tr>
+                <th class="left1">Blanket/Comforter<br>(double)</th><th class="price">550</th>
+              </tr>
+              <tr>
+                <th class="left1">INDIAN FLAG</th><th class="price"><i>FREE</i></th>
+              </tr>
+            </table>
+          </div>
+          <div class="card">
+            <table class="table">
+              <tr>
+                <th class="TopMain"><u>STEAM PRESS</u></th><th class="TopMain">INR</th>
+              </tr>
+              <tr>
+                <th class="left1">Normal Pant/Shirt</th><th class="price">15</th>
+              </tr>
+              <tr>
+                <th class="left1">Saree</th><th class="price">100</th>
+              </tr>
+              <tr>
+                <th class="left1">Ladies Dress</th><th class="price">30</th>
+              </tr>
+              <tr>
+                <th class="left1">Ladies Long Dress</th><th class="price">80</th>
+              </tr>
+              <tr>
+                <th class="left1">Blazer</th><th class="price">50</th>
+              </tr>
+            </table>
+          </div>
+          <div class="card">
+            <table class="table">
+              <tr>
+                <th class="TopMain"><u>SHOES</u></th><th class="TopMain">INR</th>
+              </tr>
+              <tr>
+                <th class="left1">Shoes-Sport</th><th class="price">300</th>
+              </tr>
+              <tr>
+                <th class="left1">Shoes-Leather<br>(with polish)</th><th class="price">300</th>
+              </tr>
+              <tr>
+                <th class="left1">Boots-leather</th><th class="price">350</th>
+              </tr>
+            </table>
+          </div>
+          <div class="card">
+            <table class="table">
+              <tr>
+                <th class="TopMain"><u>EXTRAS</u></th><th class="TopMain">INR</th>
+              </tr>
+              <tr>
+                <th class="left1">Soft Toys</th><th class="price">120</th>
+              </tr>
+              <tr>
+                <th class="left1">Curtains<br>(Per Panel)</th><th class="price">85-</th>
+              </tr>
+            </table>
+          </div>
+          <div class="card">
+            <table class="table">
+              <tr>
+                <th class="TopMain"><u>WASH & IRON</u></th><th class="TopMain">INR</th>
+              </tr>
+              <tr>
+                <th class="left1">Per -kg</th><th class="price">120</th>
+              </tr>
+            </table>
+          </div>
+          <div class="card">
+            <table class="table">
+              <tr>
+                <th class="TopMain"><u>WASH & DRY</u></th><th class="TopMain">INR</th>
+              </tr>
+              <tr>
+                <th class="left1">Per -kg</th><th class="price">85</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+</header>
+
+
+
+<!----------footer------------>
+
+<section class="footer">
+    <h4>© The Laundry Hub</h4>
+    <p>the laundry located in viman nagar pune , all rights reserved <br> made with <i class="fa fa-heart" style="color: #f443367a;"></i> by Shoaib Sayed</p>
+    <div class="icons">
+        <a href="https://www.facebook.com/Laundry-Hub-102169399245581" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/_the_laundry_hub_viman_nagar/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://wa.me/9175930572" target="_blank"><i class="fa fa-whatsapp"></i></a>
+    </div>
+</section>
+
+
+    
+<!--------------JavaScript for toggle icon------------>
+     <script>
+    var navLinks = document.getElementById("navLinks");
+    var isVisible = false;
+
+ function toggleMenu() {
+  if (isVisible) {
+    navLinks.style.display = "none";
+    isVisible = false;
+  } else {
+    navLinks.style.display = "block";
+    isVisible = true;
+  }
+}
+      </script>
+    
+    </body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF=8">
+      <meta name="viewport" content="width=device-width", initial-scale="1.0">
+      <title>The laundry hub</title>
+      <link rel = "icon" class="Title logo" href = "Gallary/otherimg/LOGO.png" type = "image/x-icon">
+     
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+      *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+link {
+    border-radius: 50px;
+}
+
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(Gallary/otherimg/WEB\ BG.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 200px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.7s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+
+
+nav .fa{
+    display: none;
+}
+
+.Contact{
+    text-align: center;
+    color: rgb(255, 0, 0);
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+@media(max-width: 700px){
+    header{
+      height: auto;
+    }
+
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.6s;
+        display: none;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+/*-------Contact---------*/
+
+.ContactLine0{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-left: 20%;
+}
+
+.ContactLine1{
+  text-align: left;
+  color: #fff;
+  font-weight: 1000;
+  padding-bottom: 0px;
+  font-size: large;
+}
+
+.ContactLine2{
+  text-align: left;
+  color: #fff;
+  margin-right: 25%;
+  font-weight: 400;
+  padding-top: 1px;
+  font-size: large;
+}
+
+.ContactLine3{
+  text-align: left;
+  color: #fff;
+  margin-right: 25%;
+  font-size: large;
+  padding-bottom: 1px;
+}
+
+.ContactLine4{
+  text-align: left;
+  color: #fff;
+  margin-right: 25%;
+  font-size: large;
+  font-weight: 400;
+  padding-top: 1px;
+}
+
+.ContactLine5{
+  text-align: left;
+  color: #fff;
+  margin-right: 25%;
+  font-size: large;
+  padding-bottom: 1px;
+}
+
+.ContactLine6{
+  text-align: left;
+  color: #fff;
+  margin-right: 25%;
+  font-size: large;
+  padding-top: 1px;
+  font-weight: 400;
+}
+
+.ContactLine7{
+  text-align: left;
+  color: #fff;
+  margin-right: 25%;
+  font-size: large;
+  padding-bottom: 1px;
+}
+
+.ContactLine8{
+  text-align: left;
+  color: #fff;
+  margin-right: 25%;
+  font-size: large;
+  padding-top: 1px;
+  font-weight: 400;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+iframe{
+  margin-top: 10px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+
+
+/*----------footer-----------*/
+
+.footer{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f4433633;
+}
+
+.footer h4{
+    padding-top: 10px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.footer p{
+    font-weight: 400;
+}
+
+.icons .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    padding-top: 5px;
+}
+
+
+    
+</style>
+
+<!-------------head__Contact--------------->
+
+</head>
+    <body>
+      <header>
+        <nav>
+           <a href="home.html"><img src="Gallary/otherimg/logo2.png"></a>
+           <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="toggleMenu()"></i>
+               <ul>
+                   <li><b><a href="home.html">HOME</a></b></li>
+                   <li><b><a href="gallary.html">GALLARY</a></b></li>
+                   <li><b><a href="prices.html">PRICES</a></li>
+                   <li><b><a href="">CONTACT</a></b></li>
+                   <li><b><a href="BeAlly.html">BE ALLY</a></b></li>
+               </ul>
+           </div>
+           <i class="fa fa-bars" onclick="toggleMenu()"></i>
+        </nav>
+        <div class="ALLcontent">
+            <div class="Contact">
+                <h1>Contacts us</h1>
+            </div>
+          <div class="ContactLine0">
+            <p class="ContactLine1"><u>Contact numbers</u></p>
+            <p class="ContactLine2">87888 93390<br>91759 30572</p>
+            <p class="ContactLine3"><u>Email</u></p>
+            <p class="ContactLine4">marketing@laundryhub.info</p>
+            <p class="ContactLine5"><u>Shop location</u></p>
+            <p class="ContactLine6">The Laundry Hub, SHOP NO 2, Siddhesh Optimus Building, Viman Nagar, Pune, Maharashtra 411014</p>
+            <p class="ContactLine7"><u>Shop Timing</u></p>
+            <p class="ContactLine8">Mon To Sun<br>09:00am - 09:00pm <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d668.5887268068076!2d73.9112128359486!3d18.569124872157456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1434ed9a6c5%3A0xa1f88c1f4f0d602c!2sLaundry%20Hub!5e0!3m2!1sen!2sin!4v1718013146594!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </header>
+
+      
+<!----------footer------------>
+
+<section class="footer">
+    <h4>© The Laundry Hub</h4>
+    <p>the laundry located in viman nagar pune , all rights reserved <br> made with <i class="fa fa-heart" style="color: #f443367a;"></i> by Shoaib Sayed</p>
+    <div class="icons">
+        <a href="https://www.facebook.com/Laundry-Hub-102169399245581" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/_the_laundry_hub_viman_nagar/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://wa.me/9175930572" target="_blank"><i class="fa fa-whatsapp"></i></a>
+    </div>
+</section>
+
+
+    
+<!--------------JavaScript for toggle icon------------>
+     <script>
+    var navLinks = document.getElementById("navLinks");
+    var isVisible = false;
+
+ function toggleMenu() {
+  if (isVisible) {
+    navLinks.style.display = "none";
+    isVisible = false;
+  } else {
+    navLinks.style.display = "block";
+    isVisible = true;
+  }
+}
+      </script>
+    
+    </body>
+</html>

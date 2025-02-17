@@ -25,19 +25,19 @@ link {
 
 header{
     background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(Gallary/otherimg/WEB\ BG.jpg);
-    height: 100%;
+    height: auto;
     width: 100%;
+    padding-bottom: 50px;
     background-size: cover;
     background-position: center;
     position: relative;
-    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 nav{
     display: flex;
     padding: 2% 6%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -77,18 +77,11 @@ nav img{
     width: 100%;
 }
 
-
-
 nav .fa{
     display: none;
 }
 
-.Gallary{
-    text-align: center;
-    color: rgb(255, 0, 0);
-    margin-top: 50px;
-    margin-bottom: 40px;
-}
+
 
 @media(max-width: 700px){
     .text-box h1{
@@ -121,46 +114,7 @@ nav .fa{
     }
 }
 
-/*-------gallary---------*/
-
-.container{
-  position: relative;
-  min-height: 50vh;
-}
-
-.container .image-container{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  padding: 10px;
-}
-
-.container .image-container .image{
-  height: 250px;
-  width: 350;
-  border: 10px solid rgba(255, 0, 0, 0.2);
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.container .image-container .image img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  transition: .2s linear;
-  border-radius: 5px;
-}
-
-.container .image-container .image:hover img{
-  transform: scale(1.1);
-  border-radius: 10px;
-}
-
-
-/*--------IDK JUST DONT Touch--------*/
+/*--------IDK, JUST DONT Touch--------*/
 
 
 
@@ -233,11 +187,132 @@ h3{
     padding-top: 5px;
 }
 
+/*------------BE ally form---------*/
+
+body{
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.contact-section{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info{
+  color: #fff;
+  max-width: 500px;
+  line-height: 65px;
+  padding-left: 50px;
+  font-size: 18px;
+}
+
+.contact-info i{
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+.contact-form{
+  max-width: 1000px;
+}
+
+.contact-info, .contact-form{
+  flex: 1;
+}
+
+.contact-form h2{
+  color: rgb(255, 0, 0);
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.contact-form .text-box{
+  background: rgba(255, 0, 0, 0.232);
+  color: rgb(255, 255, 255);
+  border: none;
+  width: calc(50% - 10px);
+  height: 50px;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-form .text-box:first-child{
+  margin-right: 15px;
+}
+
+.contact-form textarea{
+  background: rgba(255, 0, 0, 0.232);
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  min-height: 200px;
+  max-height: 400px;
+  resize: none;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-form .send-btn{
+  float: right;
+  background: #e32e2e;
+  color: #fff;
+  border: none;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: 3px;
+}
+
+.contact-form .send-btn:hover{
+  background: #8c2e2e;
+}
+
+.contact-para{
+    color: #fff;
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 950px){
+  .contact-section{
+    flex-direction: column;
+  }
+
+  .contact-info, .contact-form{
+    margin: 30px 50px;
+  }
+
+  .contact-form h2{
+    font-size: 30px;
+  }
+
+  .contact-form .text-box{
+    width: 100%;
+  }
+}
 
     
 </style>
 
-<!-------------head__gallary--------------->
+<!-------------head__BE ally--------------->
 
 </head>
 
@@ -245,43 +320,32 @@ h3{
       <header>
         <nav>
            <a href="index.html"><img src="Gallary/otherimg/logo2.png"></a>
-           <div class="nav-links" id="navLinks">
-            <i class="fa fa-times" onclick="toggleMenu()"></i>
-               <ul>
-                   <li><b><a href="index.html">HOME</a></b></li>
-                   <li><b><a href="">GALLARY</a></b></li>
-                   <li><b><a href="prices.html">PRICES</a></li>
-                   <li><b><a href="contact.html">CONTACT</a></b></li>
-                   <li><b><a href="BeAlly.html">BE ALLY</a></b></li>
-               </ul>
-           </div>
-           <i class="fa fa-bars" onclick="toggleMenu()"></i>
         </nav>
-        <div class="Gallary">
-            <h1>Gallary</h1></div>
+
+    <div class="contact-section">
+      <div class="contact-form">
+        <h2>Shedule pick</h2>
+        <form class="contact" action="https://api.web3forms.com/submit?redirect=https://thelaundryhub.online/success.html" method="post">
+          <input type="hidden" name="access_key" value="a67c3ad1-28c5-4e0d-b6e0-391e8b3eea86">
+          <input type="hidden" name="redirect" value="https://thelaundryhub.online/success.html">
+          <input type="text" name="name" class="text-box" placeholder="Your Name" required>
+          <input type="date" name="email" class="text-box" placeholder="date" required>
+          <input type="time" name="phone" class="text-box" placeholder="time" required>
+          <input type="number" name="phone" class="text-box" placeholder="Your Phone no" required>
+          <textarea name="Location" rows="2" placeholder="Location" required></textarea>
+          <button type="submit" class="send-btn" value="Send">submit</button>
+        </form>
+        <p class="contact-para">NOTE: Enter correct information</p>
+      </div>
+    </div>
+    <!--contact section end-->
+
+    <script type="text/javascript">
+    if(window.history.replaceState){
+      window.history.replaceState(null, null, window.location.href);
+    }
+    </script>
         
-        <div class="container">
-          <div class="image-container">
-              <div class="image"> <img src="Gallary/gallary/Before and After shoe.jpg"></div>
-              <div class="image"> <img src="Gallary/gallary/morning front.jpg"></div>
-              <div class="image"> <img src="Gallary/gallary/night front 1.jpg"></div>
-              <div class="image"> <img src="Gallary/gallary/night front 2.jpg"></div>
-          </div>
-        </div>
-        
-    
-  
-      <script type="text/javascript">
-      var counter = 1;
-      setInterval(function(){
-        document.getElementById('radio' + counter).checked = true;
-        counter++;
-        if(counter > 4){
-          counter = 1;
-        }
-      }, 5000);
-      </script>
-  
       </header>
 
 
@@ -302,8 +366,8 @@ h3{
     
 <!--------------JavaScript for toggle icon------------>
      <script>
-     var navLinks = document.getElementById("navLinks");
-     var isVisible = false;
+    var navLinks = document.getElementById("navLinks");
+    var isVisible = false;
 
  function toggleMenu() {
   if (isVisible) {

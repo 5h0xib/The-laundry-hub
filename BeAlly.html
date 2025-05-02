@@ -306,9 +306,62 @@ body{
     font-size: 30px;
   }
 
-  .contact-form .text-box{
-    width: 100%;
+  .contact-form .text-box, .contact-form textarea{
+    width: 92%;
   }
+}
+
+.main-info{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+.main-info .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
+  max-width: 600px;
+}
+
+.main-info .box i{
+  font-size: 100px;
+}
+
+.main-info .box h1{
+  font-size: 40px;
+  margin: 20px;
+  float: left;
+}
+
+.main-info .box h2{
+  font-size: 30px;
+  margin: 20px;
+  margin-top: 50px;
+}
+
+.main-info .box p{
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+}
+
+.main-info .box a{
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  margin: 30px;
+}
+
+.main-info .box ul{
+  margin-left: 25px;
+}
+
+.main-info .box ul li{
+  font-weight: 400;
 }
 
     
@@ -321,7 +374,7 @@ body{
     <body>
       <header>
         <nav>
-           <a href="index.html"><img src="Gallary/otherimg/logo2.png"></a>
+           <a href="index.html"><img style="margin-top: 10%; width: 120px;" src="Gallary/otherimg/Weblogo.webp"></a>
            <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="toggleMenu()"></i>
                <ul>
@@ -329,18 +382,65 @@ body{
                    <li><b><a href="gallary.html">GALLARY</a></b></li>
                    <li><b><a href="prices.html">PRICES</a></li>
                    <li><b><a href="contact.html">CONTACT</a></b></li>
-                   <li><b><a href="">BE ALLY</a></b></li>
+                   <li><b><a href="">FRANCHISE</a></b></li>
                </ul>
            </div>
            <i class="fa fa-bars" onclick="toggleMenu()"></i>
         </nav>
 
+        <div class="main-info">
+          <div class="box">
+            <h1>Our Franchise</h1>
+            <p><strong>The Laundry Hub</strong> is expanding across India and inviting passionate entrepreneurs to join our successful brand through franchise ownership. With a proven business model, end-to-end support, and growing demand for quality laundry services, this is your opportunity to build a profitable business with us.</p>
+        
+            <h2>Why Choose Our Franchise?</h2>
+            <ul>
+              <li><strong>✅ Proven Business Model:</strong> Tap into an established brand with a loyal customer base.</li>
+              <li><strong>✅ Comprehensive Training & Support:</strong> Receive expert guidance in operations, marketing, and customer service.</li>
+              <li><strong>✅ Exclusive Territory Rights:</strong> Operate in a secure, profitable location with minimal competition.</li>
+              <li><strong>✅ Advanced Technology:</strong> Use our cutting-edge laundry management system for smooth operations.</li>
+              <li><strong>✅ Marketing Assistance:</strong> Leverage our digital marketing expertise to attract and retain customers.</li>
+            </ul>
+        
+            <h2>Franchise Models We Offer</h2>
+            <p>Choose the model that best fits your investment level and business goals:</p>
+            <ul>
+              <li><strong>Express Laundry Kiosk:</strong> Compact setup with high return potential.</li>
+              <li><strong>Full-Service Laundry Outlet:</strong> End-to-end laundry, dry cleaning, and premium care services.</li>
+              <li><strong>Master Franchise:</strong> Exclusive rights to open and manage multiple outlets in a region.</li>
+            </ul>
+            <p><strong>💰 Investment Starts From:</strong> ₹14-16 lakhs<br>
+            <strong>📈 ROI Timeline:</strong> 12–18 months</p>
+        
+            <h2>Comprehensive Franchise Support</h2>
+            <ul>
+              <li>🎯 Site Selection & Setup Assistance</li>
+              <li>📢 Marketing & Branding Guidance</li>
+              <li>👨‍🏫 Staff Training & Skill Development</li>
+              <li>🛠 Equipment & Supply Chain Support</li>
+              <li>💼 Operational SOPs for Smooth Running</li>
+            </ul>
+
+            <h2>Ready to Start Your Franchise Journey?</h2>
+            <p>Join <strong>The Laundry Hub</strong> family and become part of India's growing laundry service industry. Whether you’re a first-time investor or an experienced entrepreneur, we’re here to help you every step of the way.</p>
+        
+            <p><strong>Contact Us for Franchise Enquiries:</strong></p>
+            <p>
+              <strong>Email:</strong><br>thelaundryhub.online@gmail.com<br><br>
+              <strong>Phone:</strong><br>+91 87660 95829<br><br>
+              <strong>Address:</strong><br>The Laundry Hub, SHOP NO 2, Siddhesh Optimus Building, Viman Nagar, Pune, Maharashtra 411014
+            </p>
+          </div>
+        </div>
+        
     <div class="contact-section">
       <div class="contact-form">
         <h2>be a partner</h2>
         <form class="contact" action="https://api.web3forms.com/submit?redirect=https://thelaundryhub.online/success.html" method="post">
           <input type="hidden" name="access_key" value="014fe6a9-5720-4f2a-8544-0d7e5adc0c38">
           <input type="hidden" name="redirect" value="https://thelaundryhub.online/success.html">
+          <input type="hidden" name="from_name" value="Franchise request">
+          <input type="hidden" name="subject" value="From the laundry hub">
           <input type="text" name="name" class="text-box" placeholder="Your Name" required>
           <input type="email" name="email" class="text-box" placeholder="Your Email" required>
           <input type="number" name="phone" class="text-box" placeholder="Your Phone no" required>
